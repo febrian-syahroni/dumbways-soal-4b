@@ -1,0 +1,25 @@
+body {
+  background-color: gainsboro !important;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+form {
+  width: 50%;
+}
+
+.submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    width: 30%;
+  }
+}

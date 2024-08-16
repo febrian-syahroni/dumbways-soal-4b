@@ -42,7 +42,7 @@ model Kabupaten {
   provinsiId  Int
   diresmikan  DateTime
   photo       String?
-  provinsi    Provinsi @relation(fields: [provinsiId], references: [id])
+  provinsi    Provinsi @relation(fields: [provinsiId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }

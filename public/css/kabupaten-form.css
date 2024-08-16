@@ -1,0 +1,16 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 50%;
+}
+
+.submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

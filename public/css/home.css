@@ -1,0 +1,17 @@
+body {
+  background-image: url(/public/assets/background.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+
+section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+.start {
+  width: 70%;
+}
