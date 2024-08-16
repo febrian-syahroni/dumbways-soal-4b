@@ -1,0 +1,26 @@
+<h1>Daftar Kabupaten</h1>
+<a href="/kabupaten/tambah">Tambah Kabupaten</a>
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Provinsi</th>
+      <th>Diresmikan</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each kabupatens}}
+      <tr>
+        <td>{{nama}}</td>
+        <td>{{provinsi.nama}}</td>
+        <td>{{formatDate diresmikan}}</td>
+        <td>
+          <a href="/kabupaten/{{id}}">Edit</a>
+          <a href="/kabupaten/{{id}}/hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus kabupaten ini?')">Hapus</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+<a href="/dashboard">Kembali</a>

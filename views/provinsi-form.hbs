@@ -1,0 +1,21 @@
+<h1>{{#if provinsi}}Edit{{else}}Tambah{{/if}} Provinsi</h1>
+<form action="{{#if provinsi}}/provinsi/{{provinsi.id}}{{else}}/provinsi/tambah{{/if}}" method="POST">
+  <div>
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama" value="{{provinsi.nama}}" required>
+  </div>
+  <div>
+    <label for="diresmikan">Diresmikan:</label>
+    <input type="date" id="diresmikan" name="diresmikan" value="{{provinsi.diresmikan}}" required>
+  </div>
+  <div>
+    <label for="photo">URL Foto:</label>
+    <input type="url" id="photo" name="photo" value="{{provinsi.photo}}">
+  </div>
+  <div>
+    <label for="pulau">Pulau:</label>
+    <input type="text" id="pulau" name="pulau" value="{{provinsi.pulau}}" required>
+  </div>
+  <button type="submit">Simpan</button>
+</form>
+<a href="/dashboard">Kembali</a>

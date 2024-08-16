@@ -1,0 +1,27 @@
+<h1>{{#if kabupaten}}Edit{{else}}Tambah{{/if}} Kabupaten</h1>
+<form action="{{#if kabupaten}}/kabupaten/{{kabupaten.id}}{{else}}/kabupaten/tambah{{/if}}" method="POST">
+  <div>
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama" value="{{kabupaten.nama}}" required>
+  </div>
+  <div>
+    <label for="provinsiId">Provinsi:</label>
+    <select id="provinsiId" name="provinsiId" required>
+      {{#each provinsis}}
+        <option value="{{this.id}}" {{#if (eq ../kabupaten.provinsiId this.id)}}selected{{/if}}>
+          {{this.nama}}
+        </option>
+      {{/each}}
+    </select>
+  </div>
+  <div>
+    <label for="diresmikan">Diresmikan:</label>
+    <input type="date" id="diresmikan" name="diresmikan" value="{{formatDate kabupaten.diresmikan}}" required>
+  </div>
+  <div>
+    <label for="photo">URL Foto:</label>
+    <input type="url" id="photo" name="photo" value="{{kabupaten.photo}}">
+  </div>
+  <button type="submit">Simpan</button>
+</form>
+<a href="/dashboard">Kembali</a>
